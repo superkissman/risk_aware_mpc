@@ -1,0 +1,2 @@
+bunker_description:bunker_gazebo_sim:mot_tracking:test_casadi
+-DCATKIN_DEVEL_PREFIX=/home/cc_file/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cc_file/catkin_ws/install -G Unix Makefiles

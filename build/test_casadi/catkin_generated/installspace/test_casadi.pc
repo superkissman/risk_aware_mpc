@@ -3,6 +3,6 @@ prefix=/home/cc_file/catkin_ws/install
 Name: test_casadi
 Description: Description of test_casadi
 Version: 0.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
 Requires: 

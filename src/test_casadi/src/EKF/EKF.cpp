@@ -38,11 +38,11 @@ void EKF_base::self_predict(const int step, std::vector<Eigen::VectorXd>& X_pred
         throw std::runtime_error("EKF is not initialized!");
     }
     Eigen::VectorXd x_tmp;
-    Eigen::MatrixXd P_tmp;
-    X_pred.push_back(x_tmp);
-    P_pred.push_back(P_tmp);
+    Eigen::MatrixXd P_tmp;  
     x_tmp = x;
     P_tmp = P;
+    X_pred.push_back(x_tmp);
+    P_pred.push_back(P_tmp);
     for(int k=0;k<step;++k){
         x_tmp = f(x_tmp,dt);
         Eigen::MatrixXd Fk = F(x_tmp,dt);

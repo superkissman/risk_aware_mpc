@@ -428,6 +428,19 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named obs_pred
+
+# Build rule for target.
+obs_pred: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 obs_pred
+.PHONY : obs_pred
+
+# fast build rule for target.
+obs_pred/fast:
+	$(MAKE) -f test_casadi/CMakeFiles/obs_pred.dir/build.make test_casadi/CMakeFiles/obs_pred.dir/build
+.PHONY : obs_pred/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1227,6 +1240,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... obs_pred"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_cpp"

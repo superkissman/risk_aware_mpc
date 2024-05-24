@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(test_casadi_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/cc_file/catkin_ws/src/test_casadi/include;/home/cc_file/catkin_ws/src/test_casadi/src/EKF " STREQUAL " ")
   set(test_casadi_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/cc_file/catkin_ws/src/test_casadi/include;/home/cc_file/catkin_ws/src/test_casadi/src/EKF")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")

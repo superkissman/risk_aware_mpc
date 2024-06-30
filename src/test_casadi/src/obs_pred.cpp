@@ -6,6 +6,7 @@
 #include <vector>
 EKF_CV obs1,obs2,obs3;
 std::vector<EKF_CV*> ptrs = {&obs1,&obs2,&obs3};
+// std::vector<EKF_CV*> ptrs = &obs1;
 bool flag = true;
 
 class Node {
@@ -20,7 +21,7 @@ public:
     Node(ros::NodeHandle& nh){
         nh_ = nh;
         obs_sub = nh.subscribe<visualization_msgs::MarkerArray>("/obstacle_markers",1,&Node::obs_sub_callback,this);
-        obs_EKF_pub = nh.advertise<visualization_msgs::MarkerArray>("/obs_EKF",10);
+        obs_EKF_pub = nh.advertise<visualization_msgs::MarkerArray>("/obs_EKF",30);
     }
     ~Node(){}; 
 
@@ -48,12 +49,18 @@ public:
             for(auto ptr : ptrs){
                 std::vector<Eigen::VectorXd> X_pred;
                 std::vector<Eigen::MatrixXd> P_pred;
-                ptr->self_predict(20, X_pred, P_pred);
+                ptr->self_predict(10, X_pred, P_pred);
+                // for(auto Pi:P_pred){
+                //     std::cout << Pi << std::endl;
+                //     std::cout << "***" << std::endl;
+                // }
+                // std::cout << "----------------" << std::endl;
                 int i = 0;
+                marker_array.markers.clear();
                 for(auto vec : X_pred){
-                    marker_array.markers.clear();
+                    
                     visualization_msgs::Marker marker;
-                    marker.header.frame_id = "odom";
+                    marker.header.frame_id = "/odom";
                     marker.header.stamp = ros::Time::now();
                     marker.ns = "obstacles";
                     marker.id = i;
@@ -70,9 +77,10 @@ public:
                     marker.color.g = 1.0;
                     marker.color.b = 0.0;
                     marker_array.markers.push_back(marker);
-                    obs_EKF_pub.publish(marker_array);
+                    
                     i++;
                 }
+                obs_EKF_pub.publish(marker_array);
             }
         }
         

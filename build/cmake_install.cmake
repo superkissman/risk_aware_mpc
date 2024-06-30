@@ -132,9 +132,15 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/cc_file/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/cc_file/catkin_ws/build/bunker_description/cmake_install.cmake")
+  include("/home/cc_file/catkin_ws/build/hunter/hunter2_control/cmake_install.cmake")
+  include("/home/cc_file/catkin_ws/build/Hybrid_A_Star/cmake_install.cmake")
   include("/home/cc_file/catkin_ws/build/test_casadi/cmake_install.cmake")
   include("/home/cc_file/catkin_ws/build/bunker_gazebo_sim/cmake_install.cmake")
   include("/home/cc_file/catkin_ws/build/mot_tracking/cmake_install.cmake")
+  include("/home/cc_file/catkin_ws/build/hunter/hunter2_gazebo/cmake_install.cmake")
+  include("/home/cc_file/catkin_ws/build/hunter/hunter2_base/cmake_install.cmake")
+  include("/home/cc_file/catkin_ws/build/hunter/steer_bot_hardware_gazebo/cmake_install.cmake")
+  include("/home/cc_file/catkin_ws/build/hunter/steer_drive_controller/cmake_install.cmake")
 
 endif()
 

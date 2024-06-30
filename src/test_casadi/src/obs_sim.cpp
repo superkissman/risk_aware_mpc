@@ -37,7 +37,7 @@ int main(int argc, char  *argv[]) {
             marker_array.markers[i].pose.position.y += 0.2*delta_t*i;
             marker_array.markers[i].header.stamp = ros::Time::now();           
         }
-        ROS_INFO("Publishing obstacle markers");
+        // ROS_INFO("Publishing obstacle markers");
         marker_pub.publish(marker_array);
         r.sleep();
     }

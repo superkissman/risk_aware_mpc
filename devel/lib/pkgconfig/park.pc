@@ -1,0 +1,8 @@
+prefix=/home/cc_file/catkin_ws/devel
+
+Name: park
+Description: Description of park
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

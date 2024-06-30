@@ -60,10 +60,10 @@ class risk_mpc{
         DM X0_p = DM::zeros(5*N + 3,1);
 
         risk_mpc(){
-            mot_tracking_sub = nh.subscribe<visualization_msgs::MarkerArray>("/mot_tracking/box",10,boost::bind(&risk_mpc::mot_tracking_callback,this,_1));
+            mot_tracking_sub = nh.subscribe<visualization_msgs::MarkerArray>("/obstacle_markers",10,boost::bind(&risk_mpc::mot_tracking_callback,this,_1));
             cmd_pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel",10);
             risk_mpc_timer = nh.createTimer(ros::Duration(dt),boost::bind(&risk_mpc::risk_mpc_timer_callback,this,_1));
-            odom_sub = nh.subscribe<nav_msgs::Odometry>("lio_plane2plane/mapping/odometry", 5, boost::bind(&risk_mpc::odom_sub_callback,this,_1));
+            odom_sub = nh.subscribe<nav_msgs::Odometry>("/odom", 5, boost::bind(&risk_mpc::odom_sub_callback,this,_1));
             goal_sub = nh.subscribe<geometry_msgs::PoseStamped>("/move_base_simple/goal", 5, boost::bind(&risk_mpc::goal_sub_callback,this,_1));
         }
 
@@ -169,7 +169,7 @@ class risk_mpc{
             MX obs_x;
             MX obs_y;
             MX obs_diam;
-            MX rob_diam = 0.2;
+            MX rob_diam = 1.0;
 
             for(int k = 0;k< N+1;++k){
                 for(auto obsi : obs_array){

@@ -1,0 +1,29 @@
+<launch>
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find hunter2_base)/urdf/hunter2_base_gazebo.xacro'" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="/home/gazebo_building/Parking_Lot/parkinglot.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <include file="$(find hunter2_control)/launch/hunter2_v_contol.launch" />
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+	args="-urdf -param robot_description -model hunter2_base -x 0.0 -y 0 -z 0.5 -Y 1.5708"/> 
+
+
+  <node name="map_server" pkg="map_server" type="map_server" args="/home/data/map/map.yaml" output="screen"/>
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_map_broadcaster" args="0 0 0 0 0 0  /ackermann_steering_controller/odom  /map 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_ackermann_odom_broadcaster" args="0 0 0 1.5708 0 0  /odom /ackermann_steering_controller/odom   100" /> -->
+
+
+  <node name="rviz_docker" pkg="rviz" type="rviz" output="screen" args = "-d /home/cc_file/catkin_ws/src/bunker_gazebo_sim/rviz/rviz.rviz"/>
+
+  
+
+</launch>
+

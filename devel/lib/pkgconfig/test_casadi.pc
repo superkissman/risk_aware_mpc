@@ -3,6 +3,6 @@ prefix=/home/cc_file/catkin_ws/devel
 Name: test_casadi
 Description: Description of test_casadi
 Version: 0.0.0
-Cflags: -I/home/cc_file/catkin_ws/src/test_casadi/include -I/home/cc_file/catkin_ws/src/test_casadi/src/EKF
+Cflags: -I/home/cc_file/catkin_ws/src/test_casadi/include -I/home/cc_file/catkin_ws/src/test_casadi/src/EKF -I/home/cc_file/catkin_ws/src/test_casadi/src/RISK_MPC
 Libs: -L${prefix}/lib 
 Requires: 

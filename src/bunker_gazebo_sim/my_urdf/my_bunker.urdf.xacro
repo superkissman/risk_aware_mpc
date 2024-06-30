@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 组合小车底盘与传感器 -->
+<robot name="my_bunker" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="$(find bunker_gazebo_sim)/my_urdf/my_bunker_base.urdf.xacro" />
+
+</robot>

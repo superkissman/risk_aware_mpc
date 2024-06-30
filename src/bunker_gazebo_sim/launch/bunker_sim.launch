@@ -1,21 +1,28 @@
 <launch>
   <!-- Load the URDF into the ROS Parameter Server -->
+  <!-- <param name="robot_description" command="$(find xacro)/xacro  '$(find bunker_gazebo_sim)/urdf/my_bunker.urdf.xacro'" />  -->
   <param name="robot_description" command="$(find xacro)/xacro  '$(find bunker_gazebo_sim)/urdf/bunker.xacro'" /> 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-
+    <arg name="world_name" value="/home/gazebo_building/Parking_Lot/parkinglot.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="false"/>
+    <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-	args="-unpause -urdf -model bunker -param robot_description -x 0.0 -y 0.0 -z 0.0"/> 
+	args="-unpause -urdf -model bunker -param robot_description -x 0.0 -y 0 -z 0.0 -Y 1.57"/> 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-  <node name="rviz_docker" pkg="rviz" type="rviz" output="screen"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="/home/data/map/map.yaml" output="screen"/>
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom_broadcaster" args="0 0 0 -1.5708 0 0 map odom  10" />
+
+
+  <node name="rviz_docker" pkg="rviz" type="rviz" output="screen" args = "-d /home/cc_file/catkin_ws/src/bunker_gazebo_sim/rviz/rviz.rviz"/>
+
+  
 
 </launch>
 

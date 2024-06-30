@@ -106,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include src/EKF
+  INCLUDE_DIRS include src/EKF src/RISK_MPC
 #  LIBRARIES test_casadi
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
@@ -123,6 +123,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIR}
   src/EKF
+  src/RISK_MPC
 )
 
 ## Declare a C++ library
@@ -142,6 +143,8 @@ include_directories(
 add_executable(${PROJECT_NAME}_node src/test_casadi_node.cpp)
 add_executable(obs_sim src/obs_sim.cpp)
 add_executable(obs_pred src/obs_pred.cpp src/EKF/EKF.cpp)
+add_executable(demo1 src/demo1.cpp src/RISK_MPC/RISK_MPC.cpp)
+add_executable(obs_EKF src/obs_EKF.cpp src/EKF/EKF.cpp)
 
 
 
@@ -168,10 +171,16 @@ target_link_libraries(${PROJECT_NAME}_node
 target_link_libraries(obs_sim
   ${catkin_LIBRARIES}
 )
+target_link_libraries(obs_EKF
+  ${catkin_LIBRARIES}
+)
 target_link_libraries(obs_pred
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(demo1
+  ${catkin_LIBRARIES}
+  casadi
+)
 #############
 ## Install ##
 #############

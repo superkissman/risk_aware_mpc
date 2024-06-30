@@ -23,6 +23,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   "/home/cc_file/catkin_ws/src/test_casadi/src/EKF"
+  "/home/cc_file/catkin_ws/src/test_casadi/src/RISK_MPC"
   )
 
 # Targets to which this target links.

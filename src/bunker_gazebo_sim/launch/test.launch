@@ -1,0 +1,28 @@
+<launch>
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find bunker_gazebo_sim)/my_urdf/my_bunker.urdf.xacro'" />
+
+    <!-- Start Gazebo with an empty world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+    <!-- Spawn the model in Gazebo -->
+    <node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model mycar -param robot_description" output="screen"/>
+
+    <!-- Joint State Publisher -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
+
+    <!-- Robot State Publisher -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <!-- RViz -->
+    <node name="rviz_docker" pkg="rviz" type="rviz" output="screen" args="-d /home/cc_file/catkin_ws/src/bunker_gazebo_sim/rviz/rviz.rviz"/>
+
+    <!-- Debug robot description -->
+    <node name="print_robot_description" pkg="rosparam" type="dump" args="robot_description - /tmp/robot_description.yaml" />
+</launch>

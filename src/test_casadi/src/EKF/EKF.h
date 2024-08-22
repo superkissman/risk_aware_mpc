@@ -9,9 +9,10 @@ public:
     EKF_base();
     virtual ~EKF_base();
 
+    inline double normalizeAngle(double angle);
     void initialize(const Eigen::VectorXd &x0, const Eigen::MatrixXd &P0, const Eigen::MatrixXd &Q0, const Eigen::MatrixXd &R0, const double dt0);
     void predict();
-    void self_predict(const int step, std::vector<Eigen::VectorXd>& X_pred, std::vector<Eigen::MatrixXd>& P_pred) ;
+    void self_predict(const int step, std::vector<Eigen::VectorXd>& X_pred, std::vector<Eigen::MatrixXd>& P_pred);
     void update(const Eigen::VectorXd &z);
 
     Eigen::VectorXd getState() const;

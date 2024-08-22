@@ -127,15 +127,21 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(mylibrary
-#   src/EFK/EFK.h
-#   src/EFK/EFK.cpp
-# )
+add_library(mylibrary 
+  include/TrajectoryOptimization/TrajectoryOptimization.h
+  src/TrajectoryOptimization/TrajectoryOptimization.cpp
+
+  include/hybrid_a_star/hybrid_a_star.h
+  src/hybrid_a_star/hybrid_a_star.cpp
+
+  include/hybrid_a_star/rs_path.h
+  src/hybrid_a_star/rs_path.cpp
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(mylibrary ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(mylibrary ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
@@ -145,6 +151,10 @@ add_executable(obs_sim src/obs_sim.cpp)
 add_executable(obs_pred src/obs_pred.cpp src/EKF/EKF.cpp)
 add_executable(demo1 src/demo1.cpp src/RISK_MPC/RISK_MPC.cpp)
 add_executable(obs_EKF src/obs_EKF.cpp src/EKF/EKF.cpp)
+add_executable(mymap_server src/mymap_server.cpp)
+add_executable(maker src/maker.cpp)
+
+add_executable(run_trajectory_optimization src/run_trajectory_optimization.cpp)
 
 
 
@@ -157,16 +167,23 @@ add_executable(obs_EKF src/obs_EKF.cpp src/EKF/EKF.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(run_trajectory_optimization ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(mylibrary
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(mylibrary
+  ${catkin_LIBRARIES}
+  casadi
+)
 
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
   casadi
+)
+target_link_libraries(maker
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(mymap_server
+  ${catkin_LIBRARIES}
 )
 target_link_libraries(obs_sim
   ${catkin_LIBRARIES}
@@ -180,6 +197,12 @@ target_link_libraries(obs_pred
 target_link_libraries(demo1
   ${catkin_LIBRARIES}
   casadi
+)
+
+
+target_link_libraries(run_trajectory_optimization
+  mylibrary
+  ${catkin_LIBRARIES}
 )
 #############
 ## Install ##

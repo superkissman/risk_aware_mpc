@@ -6,6 +6,13 @@ EKF_base::EKF_base() : is_initialized(false) {}
 // 析构函数
 EKF_base::~EKF_base() {}
 
+// 归一化角度到 [-π, π]
+inline double EKF_base::normalizeAngle(double angle) {
+    while (angle > M_PI) angle -= 2.0 * M_PI;
+    while (angle < -M_PI) angle += 2.0 * M_PI;
+    return angle;
+}
+
 // 初始化状态向量和状态协方差矩阵
 void EKF_base::initialize(const Eigen::VectorXd &x0, const Eigen::MatrixXd &P0, const Eigen::MatrixXd &Q0, const Eigen::MatrixXd &R0, const double dt0) {
     x = x0;
@@ -24,6 +31,7 @@ void EKF_base::predict() {
 
     // 预测状态向量
     x = f(x,dt);
+    x(2) = normalizeAngle(x(2));
 
     // 计算雅可比矩阵
     Eigen::MatrixXd Fk = F(x,dt);
@@ -45,6 +53,7 @@ void EKF_base::self_predict(const int step, std::vector<Eigen::VectorXd>& X_pred
     P_pred.push_back(P_tmp);
     for(int k=0;k<step;++k){
         x_tmp = f(x_tmp,dt);
+        x_tmp(2) = normalizeAngle(x_tmp(2)); // 归一化朝向角
         Eigen::MatrixXd Fk = F(x_tmp,dt);
         P_tmp = Fk * P_tmp * Fk.transpose() + Q;
         X_pred.push_back(x_tmp);
@@ -71,6 +80,8 @@ void EKF_base::update(const Eigen::VectorXd &z) {
 
     // 更新状态向量
     x = x + K * (z - z_pred);
+
+    x(2) = normalizeAngle(x(2));
 
     // 更新状态协方差矩阵
     int size = x.size();

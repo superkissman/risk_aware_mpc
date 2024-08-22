@@ -201,6 +201,30 @@ Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o.prov
 Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o.provides.build: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o
 
 
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/flags.make
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o: /home/cc_file/catkin_ws/src/Hybrid_A_Star/src/CC_hybrid_a_star.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o"
+	cd /home/cc_file/catkin_ws/build/Hybrid_A_Star && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o -c /home/cc_file/catkin_ws/src/Hybrid_A_Star/src/CC_hybrid_a_star.cpp
+
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.i"
+	cd /home/cc_file/catkin_ws/build/Hybrid_A_Star && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cc_file/catkin_ws/src/Hybrid_A_Star/src/CC_hybrid_a_star.cpp > CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.i
+
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.s"
+	cd /home/cc_file/catkin_ws/build/Hybrid_A_Star && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cc_file/catkin_ws/src/Hybrid_A_Star/src/CC_hybrid_a_star.cpp -o CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.s
+
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.requires:
+
+.PHONY : Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.requires
+
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.provides: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.requires
+	$(MAKE) -f Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/build.make Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.provides.build
+.PHONY : Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.provides
+
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.provides.build: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o
+
+
 # Object files for target PATH_SEARCHER_LIB
 PATH_SEARCHER_LIB_OBJECTS = \
 "CMakeFiles/PATH_SEARCHER_LIB.dir/src/rs_path.cpp.o" \
@@ -208,7 +232,8 @@ PATH_SEARCHER_LIB_OBJECTS = \
 "CMakeFiles/PATH_SEARCHER_LIB.dir/src/goal_pose_subscriber.cpp.o" \
 "CMakeFiles/PATH_SEARCHER_LIB.dir/src/init_pose_subscriber.cpp.o" \
 "CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star.cpp.o" \
-"CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o"
+"CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o" \
+"CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o"
 
 # External object files for target PATH_SEARCHER_LIB
 PATH_SEARCHER_LIB_EXTERNAL_OBJECTS =
@@ -219,6 +244,7 @@ PATH_SEARCHER_LIB_EXTERNAL_OBJECTS =
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/init_pose_subscriber.cpp.o
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star.cpp.o
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o
+/home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/build.make
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: /opt/ros/melodic/lib/libtf.so
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: /opt/ros/melodic/lib/libtf2_ros.so
@@ -245,7 +271,7 @@ PATH_SEARCHER_LIB_EXTERNAL_OBJECTS =
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: /usr/lib/x86_64-linux-gnu/libglog.so
 /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library /home/cc_file/catkin_ws/devel/lib/libPATH_SEARCHER_LIB.so"
 	cd /home/cc_file/catkin_ws/build/Hybrid_A_Star && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PATH_SEARCHER_LIB.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -259,6 +285,7 @@ Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/requires: Hybrid_A_Star/CMakeFile
 Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/requires: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/init_pose_subscriber.cpp.o.requires
 Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/requires: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star.cpp.o.requires
 Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/requires: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/hybrid_a_star_flow.cpp.o.requires
+Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/requires: Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/src/CC_hybrid_a_star.cpp.o.requires
 
 .PHONY : Hybrid_A_Star/CMakeFiles/PATH_SEARCHER_LIB.dir/requires
 

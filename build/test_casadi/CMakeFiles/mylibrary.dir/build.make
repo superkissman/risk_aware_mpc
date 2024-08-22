@@ -57,7 +57,121 @@ include test_casadi/CMakeFiles/mylibrary.dir/progress.make
 # Include the compile flags for this target's objects.
 include test_casadi/CMakeFiles/mylibrary.dir/flags.make
 
-test_casadi/CMakeFiles/mylibrary.dir/requires:
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o: test_casadi/CMakeFiles/mylibrary.dir/flags.make
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o: /home/cc_file/catkin_ws/src/test_casadi/src/TrajectoryOptimization/TrajectoryOptimization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o -c /home/cc_file/catkin_ws/src/test_casadi/src/TrajectoryOptimization/TrajectoryOptimization.cpp
+
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.i"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cc_file/catkin_ws/src/test_casadi/src/TrajectoryOptimization/TrajectoryOptimization.cpp > CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.i
+
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.s"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cc_file/catkin_ws/src/test_casadi/src/TrajectoryOptimization/TrajectoryOptimization.cpp -o CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.s
+
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.requires:
+
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.requires
+
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.provides: test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.requires
+	$(MAKE) -f test_casadi/CMakeFiles/mylibrary.dir/build.make test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.provides.build
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.provides
+
+test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.provides.build: test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o
+
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o: test_casadi/CMakeFiles/mylibrary.dir/flags.make
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o: /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/hybrid_a_star.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o -c /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/hybrid_a_star.cpp
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.i"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/hybrid_a_star.cpp > CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.i
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.s"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/hybrid_a_star.cpp -o CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.s
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.requires:
+
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.requires
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.provides: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.requires
+	$(MAKE) -f test_casadi/CMakeFiles/mylibrary.dir/build.make test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.provides.build
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.provides
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.provides.build: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o
+
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o: test_casadi/CMakeFiles/mylibrary.dir/flags.make
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o: /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/rs_path.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o -c /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/rs_path.cpp
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.i"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/rs_path.cpp > CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.i
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.s"
+	cd /home/cc_file/catkin_ws/build/test_casadi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cc_file/catkin_ws/src/test_casadi/src/hybrid_a_star/rs_path.cpp -o CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.s
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.requires:
+
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.requires
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.provides: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.requires
+	$(MAKE) -f test_casadi/CMakeFiles/mylibrary.dir/build.make test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.provides.build
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.provides
+
+test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.provides.build: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o
+
+
+# Object files for target mylibrary
+mylibrary_OBJECTS = \
+"CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o" \
+"CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o" \
+"CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o"
+
+# External object files for target mylibrary
+mylibrary_EXTERNAL_OBJECTS =
+
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: test_casadi/CMakeFiles/mylibrary.dir/build.make
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/libroscpp.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/librosconsole.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/librostime.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/cc_file/catkin_ws/devel/lib/libmylibrary.so: test_casadi/CMakeFiles/mylibrary.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cc_file/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /home/cc_file/catkin_ws/devel/lib/libmylibrary.so"
+	cd /home/cc_file/catkin_ws/build/test_casadi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mylibrary.dir/link.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+test_casadi/CMakeFiles/mylibrary.dir/build: /home/cc_file/catkin_ws/devel/lib/libmylibrary.so
+
+.PHONY : test_casadi/CMakeFiles/mylibrary.dir/build
+
+test_casadi/CMakeFiles/mylibrary.dir/requires: test_casadi/CMakeFiles/mylibrary.dir/src/TrajectoryOptimization/TrajectoryOptimization.cpp.o.requires
+test_casadi/CMakeFiles/mylibrary.dir/requires: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/hybrid_a_star.cpp.o.requires
+test_casadi/CMakeFiles/mylibrary.dir/requires: test_casadi/CMakeFiles/mylibrary.dir/src/hybrid_a_star/rs_path.cpp.o.requires
 
 .PHONY : test_casadi/CMakeFiles/mylibrary.dir/requires
 

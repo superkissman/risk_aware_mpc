@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/include/hybrid_a_star/CC_hybrid_a_star.h
+hybrid_a_star.h
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/include/hybrid_a_star/hybrid_a_star.h
+costmap_subscriber.h
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/include/hybrid_a_star/costmap_subscriber.h
+init_pose_subscriber.h
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/include/hybrid_a_star/init_pose_subscriber.h
+goal_pose_subscriber.h
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/include/hybrid_a_star/goal_pose_subscriber.h
+ros/ros.h
+-
+
 /home/cc_file/catkin_ws/src/Hybrid_A_Star/include/hybrid_a_star/costmap_subscriber.h
 ros/ros.h
 -
@@ -110,6 +122,20 @@ cmath
 vector
 -
 Eigen/Core
+-
+
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/src/CC_hybrid_a_star.cpp
+hybrid_a_star/CC_hybrid_a_star.h
+/home/cc_file/catkin_ws/src/Hybrid_A_Star/src/hybrid_a_star/CC_hybrid_a_star.h
+nav_msgs/Path.h
+-
+visualization_msgs/Marker.h
+-
+visualization_msgs/MarkerArray.h
+-
+tf/transform_datatypes.h
+-
+tf/transform_broadcaster.h
 -
 
 /home/cc_file/catkin_ws/src/Hybrid_A_Star/src/costmap_subscriber.cpp
